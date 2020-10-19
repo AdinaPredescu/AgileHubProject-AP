@@ -1,0 +1,7 @@
+C:\Users\adpredescu\Desktop\AgileHub\AgileHubProject-AP\Curs5\bin\Debug\Curs5.exe.config
+C:\Users\adpredescu\Desktop\AgileHub\AgileHubProject-AP\Curs5\bin\Debug\Curs5.exe
+C:\Users\adpredescu\Desktop\AgileHub\AgileHubProject-AP\Curs5\bin\Debug\Curs5.pdb
+C:\Users\adpredescu\Desktop\AgileHub\AgileHubProject-AP\Curs5\obj\Debug\Curs5.csprojAssemblyReference.cache
+C:\Users\adpredescu\Desktop\AgileHub\AgileHubProject-AP\Curs5\obj\Debug\Curs5.csproj.CoreCompileInputs.cache
+C:\Users\adpredescu\Desktop\AgileHub\AgileHubProject-AP\Curs5\obj\Debug\Curs5.exe
+C:\Users\adpredescu\Desktop\AgileHub\AgileHubProject-AP\Curs5\obj\Debug\Curs5.pdb

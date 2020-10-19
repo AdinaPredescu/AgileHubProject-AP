@@ -1,0 +1,7 @@
+C:\Users\adpredescu\Desktop\AgileHub\AgileHubProject\HomeworkAP\bin\Debug\HomeworkAP.exe.config
+C:\Users\adpredescu\Desktop\AgileHub\AgileHubProject\HomeworkAP\bin\Debug\HomeworkAP.exe
+C:\Users\adpredescu\Desktop\AgileHub\AgileHubProject\HomeworkAP\bin\Debug\HomeworkAP.pdb
+C:\Users\adpredescu\Desktop\AgileHub\AgileHubProject\HomeworkAP\obj\Debug\HomeworkAP.csprojAssemblyReference.cache
+C:\Users\adpredescu\Desktop\AgileHub\AgileHubProject\HomeworkAP\obj\Debug\HomeworkAP.csproj.CoreCompileInputs.cache
+C:\Users\adpredescu\Desktop\AgileHub\AgileHubProject\HomeworkAP\obj\Debug\HomeworkAP.exe
+C:\Users\adpredescu\Desktop\AgileHub\AgileHubProject\HomeworkAP\obj\Debug\HomeworkAP.pdb
