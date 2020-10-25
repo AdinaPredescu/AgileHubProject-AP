@@ -27,6 +27,11 @@ namespace Curs5
             Nume = nume;
         }
 
+        public void SetareCurs(int durata)
+        {
+            Durata = durata;
+        }
+
         ////destructor
         //~ ClassCurs()
         //{
@@ -34,7 +39,12 @@ namespace Curs5
         //}
 
         // metode overload: folosim aceeasi metoda si o incarcam cu mai multi parametri, iar ea va lua decizii in functie de parametrii dati
-        // metode overwrite: o metoda va schimba total functionalitatea deja declarata
+        // metode override: o metoda va schimba total functionalitatea deja declarata; public virtual/
+
+        public virtual void SetareCurs()
+        {
+
+        }
 
 
     }
