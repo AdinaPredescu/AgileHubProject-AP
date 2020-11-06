@@ -14,7 +14,7 @@ using OpenQA.Selenium.Support.UI;
 namespace SeleniumTestsProject_AP
 {
     [TestFixture, Category("Login")]
-    class Tests : Hooks
+    class Tests : Hooks1
     {
 
         [Test, Category("Login")]
@@ -77,7 +77,6 @@ namespace SeleniumTestsProject_AP
         }
 
         [Test]
-        //WIP
         public void NavigateToFirstShowOfFirstTeamMember()
         {
 
@@ -97,7 +96,6 @@ namespace SeleniumTestsProject_AP
             LoginPage loginPageCasQa = new LoginPage(Driver);
             homePageCasQa.GoToInscriereCasQa();
             loginPageCasQa.FillSignUpFormCasQa();
-            Thread.Sleep(5000);
             loginPageCasQa.LoginRegularUserCasQa();
             Thread.Sleep(5000);
         }

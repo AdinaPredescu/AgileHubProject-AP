@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using SeleniumTestsProject_AP.Data;
 using OpenQA.Selenium;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Threading;
 
 namespace SeleniumTestsProject_AP.PageObjects
 {
@@ -71,9 +72,14 @@ namespace SeleniumTestsProject_AP.PageObjects
         }
 
         public void TeatrulSicaAlexandrescuTeamMenu()
-        {
+        {         
             TeatrulSicaAlexandrescuTeamButton.Click();
+            IJavaScriptExecutor js1 = (IJavaScriptExecutor)_driver;
+            js1.ExecuteScript("window.scrollBy(0,500)", "");
             TeatrulSicaAlexandrescuFirstTeamMemberButton.Click();
+            IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
+            js.ExecuteScript("window.scrollBy(0,500)", "");
+            Thread.Sleep(5000);
             TeatrulSicaAlexandrescuFirstShowButton.Click();
         }
     }

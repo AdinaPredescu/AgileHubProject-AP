@@ -26,10 +26,10 @@ namespace SeleniumTestsProject_AP.Data
 
         //CasQa Seed Data
         public const string FullNameCasQa = "RobbieTheVacuumCleaner";
-        public const string EmailCasQa = "robbie@email.com";
+        public const string EmailCasQa = "robbie@gmail.com";
         public const string PhoneNumberCasQa = "0987654321";
         public const string AddressCasQa = "Robbie's Address 1";
-        public const string PasswordCasQa = "password1";
+        public const string PasswordCasQa = "password123";
 
     }
 }
