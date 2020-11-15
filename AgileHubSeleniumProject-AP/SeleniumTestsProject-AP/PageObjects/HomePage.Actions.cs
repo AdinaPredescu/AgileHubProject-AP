@@ -55,30 +55,46 @@ namespace SeleniumTestsProject_AP.PageObjects
             CasQaUtilizatoriButton.Click();
         }
 
-        public void GoogleSearchImage()
+        public void GoogleSearchParis()
         {
             GoogleAcceptCookiesButton.Click();
             GoogleSearchBar.SendKeys(GoogleSearchCriteria);
             GoogleSearchButton.Click();
+        }
+
+        public void GoogleSearchImage()
+        {
             GoogleImagesButton.Click();
+        }
+        public void GoogleSearchClickImage()
+        {
             GoogleClickFirstImage.Click();
+        }
+        public void GoogleSearchImageBack()
+        {
             GoogleClickFirstImage.Click();
         }
 
         public void UntoldHomePageMenu()
         {
             UntoldMenuButton.Click();
+            Thread.Sleep(3000);
             UntoldHomeButton.Click();
         }
 
         public void TeatrulSicaAlexandrescuTeamMenu()
-        {         
+        {
             TeatrulSicaAlexandrescuTeamButton.Click();
             IJavaScriptExecutor js1 = (IJavaScriptExecutor)_driver;
             js1.ExecuteScript("window.scrollBy(0,500)", "");
+            Thread.Sleep(5000);
             TeatrulSicaAlexandrescuFirstTeamMemberButton.Click();
             IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
             js.ExecuteScript("window.scrollBy(0,500)", "");
+        }
+
+        public void TeatrulSicaAlexandrescuTeamMenuFirstShow()
+        {
             Thread.Sleep(5000);
             TeatrulSicaAlexandrescuFirstShowButton.Click();
         }

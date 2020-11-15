@@ -51,6 +51,7 @@ namespace SeleniumTestsProject_AP.PageObjects
         private IWebElement TeatrulSicaAlexandrescuTeamButton => _driver.FindElement(By.CssSelector("#menu-item-2914 > a"));
         private IWebElement TeatrulSicaAlexandrescuFirstTeamMemberButton => _driver.FindElement(By.CssSelector("#av-masonry-1-item-2697 > figure > div > div"));
         private IWebElement TeatrulSicaAlexandrescuFirstShowButton => _driver.FindElement(By.XPath("//*[@id='av-layout-grid-1']/div[1]/div/div[1]/section/div/p[2]/a"));
+        public IWebElement BuyTicketButton => _driver.FindElement(By.XPath("//*[@id='av-layout-grid-1']/div[1]/div/div[1]/a/span"));
         #endregion
     }
 }

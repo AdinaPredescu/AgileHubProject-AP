@@ -37,7 +37,10 @@ namespace SeleniumTestsProject_AP
             Driver.Navigate().GoToUrl(TestEnvData.GetBaseUrl(TestEnvironments.GoogleHomePage));
             HomePage googleHomePage = new HomePage(Driver);
             Driver.SwitchTo().Frame(Driver.FindElement(By.CssSelector("#cnsw > iframe")));
+            googleHomePage.GoogleSearchParis();
             googleHomePage.GoogleSearchImage();
+            googleHomePage.GoogleSearchClickImage();
+            googleHomePage.GoogleSearchImageBack();
             googleHomePage.VerifyElementIsDisplayed(googleHomePage.GoogleAllButton);
 
             Thread.Sleep(2000);
@@ -83,6 +86,7 @@ namespace SeleniumTestsProject_AP
             Driver.Navigate().GoToUrl(TestEnvData.GetBaseUrl(TestEnvironments.TeatrulSicaAlexandrescu));
             HomePage homePageTeatrulSicaAlexandrescu = new HomePage(Driver);
             homePageTeatrulSicaAlexandrescu.TeatrulSicaAlexandrescuTeamMenu();
+            homePageTeatrulSicaAlexandrescu.TeatrulSicaAlexandrescuTeamMenuFirstShow();
             Thread.Sleep(2000);
         }
 

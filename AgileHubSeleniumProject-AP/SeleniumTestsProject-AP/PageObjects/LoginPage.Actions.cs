@@ -2,24 +2,22 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using SeleniumTestsProject_AP.Data;
 using System.Threading;
+using SeleniumTestsProject_AP.Dto;
+using System.Reflection;
 
 namespace SeleniumTestsProject_AP.PageObjects
 {
     partial class LoginPage : SeedData
     {
         private IWebDriver _driver;
-       // private WebDriverWait _driverWait;
+       private WebDriverWait _driverWait;
         public LoginPage(IWebDriver driver)
         {
             _driver = driver;
-           // _driverWait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
-           // _driverWait.IgnoreExceptionTypes(typeof(NoSuchElementException));
+           _driverWait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
+           _driverWait.IgnoreExceptionTypes(typeof(NoSuchElementException));
         }
         public void VerifyElementIsDisplayed(IWebElement elementToVerify)
         {
@@ -91,6 +89,30 @@ namespace SeleniumTestsProject_AP.PageObjects
             CasQaEmailFieldTextBox.SendKeys(userEmailCasqa);
             CasQaPasswordFieldTextBox.SendKeys(userPasswordCasQa);
             CasQaSubmitButton.Click();            
+        }
+
+        public void LoginIntoApplication(UserDto user)
+        {
+            //EmailFieldTextBox.SendKeys(user.userEmail);
+            //PasswordFieldTextBox.SendKeys(user.userPassword);
+
+            //var validUser = user.GetValidUser();
+            //var userRuntimeProperties = user.GetType().GetRuntimeProperties(); //returns a collection
+            //var userProperties = user.GetType().GetProperties(); //returns an array
+
+            var emailValue = user.GetType().GetRuntimeProperty("userEmail").GetValue(user);
+            if (emailValue != null)
+            {
+                CasQaEmailFieldTextBox.SendKeys(emailValue.ToString());
+            }
+
+            var passwordValue = user.GetType().GetRuntimeProperty("userPassword").GetValue(user);
+            if (passwordValue != null)
+            {
+                CasQaPasswordFieldTextBox.SendKeys(passwordValue.ToString());
+            }
+
+            CasQaSubmitButton.Click();
         }
 
     }

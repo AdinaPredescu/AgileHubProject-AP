@@ -7,6 +7,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using NUnit.Framework;
 using OpenQA.Selenium;
+using SeleniumTestsProject_AP.Data;
 
 namespace SeleniumTestsProject_AP
 {
@@ -16,26 +17,24 @@ namespace SeleniumTestsProject_AP
         Firefox
     }
     
-    //[Binding] otherwise it creates 2 browser instances
+    [Binding] //otherwise it creates 2 browser instances
     
 
     public class Hooks1
     {
-        // For additional details on SpecFlow hooks see http://go.specflow.org/doc-hooks
         private BrowserType _browserType;
-        protected IWebDriver Driver;
+        protected static IWebDriver Driver;
 
         [BeforeScenario]
         public void BeforeScenario()
         {
-            //TODO: implement logic that has to run before executing each scenario
-
             var browserType = TestContext.Parameters.Get("Browser", "Chrome");
             _browserType = (BrowserType)Enum.Parse(typeof(BrowserType), browserType);
-            ChooseDriverInstance(_browserType);
-            Driver.Manage().Window.Maximize();
-            Driver.Navigate().GoToUrl("http://demosite.casqad.org/");
-
+            if (Driver is null)
+            {
+                ChooseDriverInstance(_browserType);
+                Driver.Manage().Window.Maximize();
+            }
         }
 
         public void ChooseDriverInstance(BrowserType browserType)
@@ -55,8 +54,11 @@ namespace SeleniumTestsProject_AP
         [AfterScenario]
         public void AfterScenario()
         {
-            //TODO: implement logic that has to run after executing each scenario
+            if (!(Driver is null))
+            {
                 Driver.Quit();
+                Driver = null;
+            }
         }
     }
 }
